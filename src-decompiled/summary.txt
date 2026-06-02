@@ -1,0 +1,44 @@
+Summary for C:\Users\Administrator\Downloads\Clap-deobf.jar
+Decompiled with CFR 0.152
+
+
+org.lwjgl.system.windows.WindowsLibrary
+----------------------------
+
+getPath()
+  Loose catch block
+
+
+psx.hyk.0ii_2
+----------------------------
+
+OiOO(net.minecraft.screen.ScreenHandler int )
+  Handled impossible loop by adding 'first' condition
+
+
+psx.Hyk.O000
+----------------------------
+
+i0OI(java.lang.String )
+  Unable to fully structure code
+
+
+psx.hyk.o00o_0
+----------------------------
+
+i000(java.lang.String boolean )
+  Recovered potentially malformed switches.  Disable with '--allowmalformedswitch false'
+
+
+psx.hyk.ooii_3
+----------------------------
+
+0IO(psx.hyk.oio_5 )
+  Unable to fully structure code
+
+
+psx.hyk.oooo_5
+----------------------------
+
+iiio(net.minecraft.util.math.Vec3d double double net.minecraft.util.math.Box net.minecraft.util.math.Vec3d double double[] )
+  Handled impossible loop by adding 'first' condition

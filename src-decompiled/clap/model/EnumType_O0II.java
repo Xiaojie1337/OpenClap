@@ -1,0 +1,353 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package clap.model;
+
+import java.security.Key;
+import java.security.MessageDigest;
+import javax.crypto.Cipher;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.DESKeySpec;
+import javax.crypto.spec.IvParameterSpec;
+
+final class EnumType_O0II
+extends Enum {
+    public static final /* enum */ EnumType_O0II oiI;
+    final String SprintModule;
+    final String IOo;
+    final String ConfigSupport_IO0;
+    public static final /* enum */ EnumType_O0II oii;
+    private static final /* synthetic */ EnumType_O0II[] DataRecord_I0O;
+    final String WatermarkHudElement;
+    public static final /* enum */ EnumType_O0II oio;
+    public static final /* enum */ EnumType_O0II oi0;
+    final int IOi;
+    static Object EnumType_I00;
+
+    public static EnumType_O0II[] values() {
+        return (EnumType_O0II[])DataRecord_I0O.clone();
+    }
+
+    /*
+     * WARNING - Possible parameter corruption
+     * WARNING - void declaration
+     */
+    private EnumType_O0II(String param3, String param4, int param5) {
+        void param7;
+        void param6;
+        this.WatermarkHudElement = param3;
+        this.ConfigSupport_IO0 = param4;
+        this.IOo = (String)param5;
+        this.SprintModule = param6;
+        this.IOi = param7;
+    }
+
+    public static EnumType_O0II valueOf(String param0) {
+        return Enum.valueOf(EnumType_O0II.class, param0);
+    }
+
+    static {
+        byte[] v0 = "z\t'\u00bf\u00c5\u00f6`\u00e2\u0094\u008c\u001e3?\u009a\u00e1\u00dcn\u00ef\u00e6t\u0083\u00fb\u0004\u00c8\u00b2\u0094h\u00ecm\u00a5_d\u0014O\u0017%\u00a0\u00e6\u0015\u0016PZ/u\u00afD+\u00f1\b1\u00ec\u00001\u000e\u008a\u00f9\u00c8\u00f2\u00fe\u00b8\u009d\u0017\u008d\u00e4\u0017>}\u000f\u00b8\u00d5\u0094ba>\u0088\u00d4\u0093\u00c4G\u0085\u00855\u00fc\u00c3\u0002\u001aQ\u0001\u00bd\u001ej\u00a9\u008a\u00d2q\u00d8\u00976\u00fc\u0085\u0005=\n\u00e4\u00c4\u00ed\u008a\u0081ca\u00f6\u00d2\u00b9\u00a8`\u00a8\u00be\u00e6\u00b4\u0086\u00c2\u00d7\u00bf\u0083p\u00e2\u0084|\u0093\u00b0\u00f5A\u00b5\u00deJJ\u00062\u00b0\u00a9\u00bb\u00f5bQ\u00ac!\u00e1\u0091\u00f7\u0096r\u00aae\u00cb\u00ed3\u00a2\u00ba\u00dd@?\u0018\u00c7n\u0017\u00bb\u00a3\u0014\u008a\u00bb\bH\u00de\u000e\u00a0\u001d\u00ef\u00e5j\u009f\u00b8\u0017w\u00a3w\u00c6h\u00b2r\u00ec_\u00ee\u0092\u00c8\u001c\u0095r\u00db|\u00c1q\u0084\u00a9w\u00cf\u00d1sk\u00ba\u0013\u00ca\u00b8\u00dc)\r\u009ac\u00d0\\\n\u0094\u0089\u0006\u00a8?*J2`lc\u0097\u00f2w\u00f0A\u008f\u0098Y\u009fF\u00d5\u0084\u0013\u0085p\u0014*Q\u00f3*\u00f3\u009a \u00e5\u00b5\u00fa\u0093\u00d9\u00fc\u0090\u00f8)\u008b\u001a\u00ac\u00b9\u00a3#$\u00c6v\u009e\u0007\u00bfq\u00db\u000b\fE\t\u00be7\u00f0\u0017\u000e\u00efU\u0090\u00f3\u00e4\u0011\u0013\u00cd\u009fp\u00a7\u0016\u00c5\u00fa\u00ff4IW\u00f2/\u0082\u00d00M\u00b4\u00c2\u0010\u00a6\u00d8+\u0085\u00b0\u00bb\u00d2".getBytes("ISO_8859_1");
+        Object[] v1 = "\u0002\u009e\u00d0\u00be\u000f\u00f0\u00bb:".getBytes("ISO_8859_1");
+        int v2 = 0;
+        do {
+            v0[v2++] = (byte)(switch (v0[v2] & 0xFF) {
+                case 0 -> 741422262;
+                case 1 -> -540859987;
+                case 2 -> -1917567075;
+                case 3 -> 1050755876;
+                case 4 -> 1059205482;
+                case 5 -> 118592670;
+                case 6 -> 818212629;
+                case 7 -> 840741342;
+                case 8 -> -1026001962;
+                case 9 -> -618564231;
+                case 10 -> -1686208295;
+                case 11 -> 1167538828;
+                case 12 -> 1822146448;
+                case 13 -> -420114753;
+                case 14 -> -2032554513;
+                case 15 -> -506380717;
+                case 16 -> -1523749123;
+                case 17 -> 193122310;
+                case 18 -> 242394799;
+                case 19 -> -2147367144;
+                case 20 -> -813095972;
+                case 21 -> -1518092041;
+                case 22 -> -1542030724;
+                case 23 -> -2124753285;
+                case 24 -> 667197188;
+                case 25 -> 1258702590;
+                case 26 -> -1752476495;
+                case 27 -> 563608921;
+                case 28 -> 1909709002;
+                case 29 -> 1603621181;
+                case 30 -> 1160817063;
+                case 31 -> -1640073188;
+                case 32 -> -1095526594;
+                case 33 -> 200551209;
+                case 34 -> 1848891921;
+                case 35 -> 2097423625;
+                case 36 -> -1009895678;
+                case 37 -> -646352854;
+                case 38 -> 1206451100;
+                case 39 -> 1128594626;
+                case 40 -> -242001382;
+                case 41 -> 359918804;
+                case 42 -> -325145234;
+                case 43 -> 885320735;
+                case 44 -> 208972878;
+                case 45 -> -2031881211;
+                case 46 -> -1304476591;
+                case 47 -> 997607412;
+                case 48 -> 1141309071;
+                case 49 -> -59249895;
+                case 50 -> -1585401355;
+                case 51 -> -1160046782;
+                case 52 -> -265793032;
+                case 53 -> -496827177;
+                case 54 -> -1366828835;
+                case 55 -> 974784902;
+                case 56 -> 1627433601;
+                case 57 -> -1013875567;
+                case 58 -> 821778105;
+                case 59 -> -700068695;
+                case 60 -> -977485484;
+                case 61 -> 942528455;
+                case 62 -> 1758254392;
+                case 63 -> -857731775;
+                case 64 -> -1539385676;
+                case 65 -> -258022790;
+                case 66 -> 230654692;
+                case 67 -> 59731174;
+                case 68 -> -755806495;
+                case 69 -> -262243059;
+                case 70 -> 488976674;
+                case 71 -> -1080943450;
+                case 72 -> 1388045315;
+                case 73 -> -1819972472;
+                case 74 -> 1790134946;
+                case 75 -> 736951647;
+                case 76 -> -759333302;
+                case 77 -> 350798029;
+                case 78 -> 837524008;
+                case 79 -> 1659989173;
+                case 80 -> 1879705429;
+                case 81 -> 761892887;
+                case 82 -> -995852491;
+                case 83 -> 1555176565;
+                case 84 -> 1491130028;
+                case 85 -> 1205865560;
+                case 86 -> -335597677;
+                case 87 -> -90070888;
+                case 88 -> 601192632;
+                case 89 -> 605497697;
+                case 90 -> 181536108;
+                case 91 -> -551842253;
+                case 92 -> -1076495323;
+                case 93 -> -1629589625;
+                case 94 -> 645398731;
+                case 95 -> 1883462264;
+                case 96 -> 268894140;
+                case 97 -> 1904980672;
+                case 98 -> -1135214429;
+                case 99 -> 1320309579;
+                case 100 -> 1325213677;
+                case 101 -> -526474486;
+                case 102 -> 2054773691;
+                case 103 -> 1277188708;
+                case 104 -> -851392956;
+                case 105 -> -1948999125;
+                case 106 -> 1203425183;
+                case 107 -> 315182644;
+                case 108 -> 813815798;
+                case 109 -> 1914383474;
+                case 110 -> 1863055867;
+                case 111 -> -569691910;
+                case 112 -> 11502129;
+                case 113 -> 364105254;
+                case 114 -> -1723542072;
+                case 115 -> -304643248;
+                case 116 -> -1618482633;
+                case 117 -> -658209549;
+                case 118 -> -1674975680;
+                case 119 -> 1934915995;
+                case 120 -> 594143662;
+                case 121 -> -994321401;
+                case 122 -> 196809369;
+                case 123 -> 733010175;
+                case 124 -> 1887172883;
+                case 125 -> 396384115;
+                case 126 -> 661015788;
+                case 127 -> 1895282347;
+                case 128 -> 551057773;
+                case 129 -> 232180476;
+                case 130 -> -558328924;
+                case 131 -> 1440707854;
+                case 132 -> -1230962038;
+                case 133 -> 1432604711;
+                case 134 -> -1545929354;
+                case 135 -> 727819521;
+                case 136 -> 1725926257;
+                case 137 -> -1788313435;
+                case 138 -> -321870009;
+                case 139 -> 1000318915;
+                case 140 -> -751472804;
+                case 141 -> 702216147;
+                case 142 -> 709222550;
+                case 143 -> 1601321320;
+                case 144 -> -540688501;
+                case 145 -> 343897635;
+                case 146 -> -1693455412;
+                case 147 -> -1992271342;
+                case 148 -> -1412867096;
+                case 149 -> -1456530854;
+                case 150 -> 1904220306;
+                case 151 -> 1117524795;
+                case 152 -> -1827622477;
+                case 153 -> 1623550350;
+                case 154 -> -492559005;
+                case 155 -> 552215134;
+                case 156 -> 513816807;
+                case 157 -> -1008841623;
+                case 158 -> -893841106;
+                case 159 -> 977508459;
+                case 160 -> 1473379039;
+                case 161 -> -1994252515;
+                case 162 -> -457904151;
+                case 163 -> -452012334;
+                case 164 -> 221755659;
+                case 165 -> -629804218;
+                case 166 -> 673139488;
+                case 167 -> 1824493466;
+                case 168 -> 404656099;
+                case 169 -> -2059257195;
+                case 170 -> -1346948411;
+                case 171 -> -1425821091;
+                case 172 -> 2119046095;
+                case 173 -> 1952604544;
+                case 174 -> -1075773227;
+                case 175 -> -2002955401;
+                case 176 -> -1565892550;
+                case 177 -> -898359454;
+                case 178 -> -1127911753;
+                case 179 -> -1702357534;
+                case 180 -> 1778485966;
+                case 181 -> -513441551;
+                case 182 -> 1890489676;
+                case 183 -> 1359647461;
+                case 184 -> -322808357;
+                case 185 -> 881649601;
+                case 186 -> 851891863;
+                case 187 -> 1429916112;
+                case 188 -> -1142730576;
+                case 189 -> 763794492;
+                case 190 -> -936845737;
+                case 191 -> -1199137217;
+                case 192 -> -199323576;
+                case 193 -> 365390522;
+                case 194 -> 745487009;
+                case 195 -> -549463427;
+                case 196 -> -132664037;
+                case 197 -> 931988100;
+                case 198 -> 1860513632;
+                case 199 -> -1791144448;
+                case 200 -> 625411051;
+                case 201 -> -321959056;
+                case 202 -> 358728805;
+                case 203 -> 1754856837;
+                case 204 -> -1176657329;
+                case 205 -> -363319056;
+                case 206 -> -923713463;
+                case 207 -> 1152216365;
+                case 208 -> 1216633790;
+                case 209 -> 879370821;
+                case 210 -> -1308590233;
+                case 211 -> -990737166;
+                case 212 -> -216568918;
+                case 213 -> -1851363642;
+                case 214 -> -855581162;
+                case 215 -> -428032078;
+                case 216 -> 2090283977;
+                case 217 -> -59723244;
+                case 218 -> -1934445954;
+                case 219 -> -1780019719;
+                case 220 -> 1840180070;
+                case 221 -> 52229680;
+                case 222 -> 1873768596;
+                case 223 -> 815499651;
+                case 224 -> -1280337240;
+                case 225 -> -2146818400;
+                case 226 -> 1387007518;
+                case 227 -> -369407146;
+                case 228 -> -1863387680;
+                case 229 -> -593299857;
+                case 230 -> -2088811048;
+                case 231 -> 1092205389;
+                case 232 -> 2086595887;
+                case 233 -> -1185190062;
+                case 234 -> 561947789;
+                case 235 -> 1490353033;
+                case 236 -> -701755335;
+                case 237 -> 1768009516;
+                case 238 -> -1719616970;
+                case 239 -> 1011849917;
+                case 240 -> -1652688166;
+                case 241 -> 119316607;
+                case 242 -> -436096496;
+                case 243 -> 1936587587;
+                case 244 -> -1453947086;
+                case 245 -> -688152972;
+                case 246 -> 1103834564;
+                case 247 -> -130284310;
+                case 248 -> 826374412;
+                case 249 -> 1422288904;
+                case 250 -> -1269350959;
+                case 251 -> -1253698801;
+                case 252 -> -1420835198;
+                case 253 -> 1154268449;
+                case 254 -> 103923035;
+                case 255 -> 1882865390;
+                default -> 2029440672;
+            });
+        } while (v2 != 320);
+        Cipher cipher = Cipher.getInstance("DES/CBC/PKCS5Padding");
+        cipher.init(2, (Key)SecretKeyFactory.getInstance("DES").generateSecret(new DESKeySpec((byte[])v1)), new IvParameterSpec(new byte[8]));
+        v0 = cipher.doFinal(v0);
+        int v3 = v0.length;
+        MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
+        messageDigest.reset();
+        v2 = v3 - 32;
+        messageDigest.update(v0, 0, v2);
+        v1 = messageDigest.digest();
+        int v4 = 0;
+        int v52 = 0;
+        int v6 = 0;
+        do {
+            v52 |= v0[v2 + v4] ^ v1[v4];
+        } while (++v4 != 32);
+        if (v52 == 0) {
+            Object[] objectArray = new Object[16];
+            v1 = objectArray;
+            EnumType_I00 = objectArray;
+            v3 = v2;
+            v2 = 0;
+            do {
+                v4 = v0[v2++] & 0xFF | (v0[v2++] & 0xFF) << 8;
+                byte[] v52 = new byte[v4];
+                System.arraycopy(v0, v2, v52, 0, v4);
+                v1[v6++] = (byte)new String(v52, "UTF-8").intern();
+            } while ((v2 += v4) != v3);
+        }
+        oi0 = new EnumType_O0II("LOGIN", 0, "\u767b\u5f55", "\u767b\u5f55", "\u767b\u5f55\u6388\u6743", "\u8f93\u5165\u8d26\u53f7\u548c\u5bc6\u7801\u767b\u5f55\u3002", 2);
+        oio = new EnumType_O0II("REGISTER", 1, "\u6ce8\u518c", "\u6ce8\u518c", "\u6ce8\u518c\u8d26\u53f7", "\u521b\u5efa\u8d26\u53f7\u3001\u7ed1\u5b9a\u8bbe\u5907\u5e76\u4fdd\u5b58 QQ\u3002", 4);
+        oiI = new EnumType_O0II("ACTIVATE", 2, "\u5145\u503c", "\u5145\u503c", "\u8d26\u53f7\u5145\u503c", "\u4f7f\u7528\u5361\u5bc6\u4e3a\u8d26\u53f7\u5145\u503c\u3002", 2);
+        oii = new EnumType_O0II("CHANGE_PASSWORD", 3, "\u6539\u5bc6", "\u6539\u5bc6", "\u4fee\u6539\u5bc6\u7801", "\u901a\u8fc7\u8d85\u7ea7\u5bc6\u7801\u4fee\u6539\u767b\u5f55\u5bc6\u7801\u3002", 3);
+        DataRecord_I0O = EnumType_O0II.OIo();
+    }
+
+    private static /* synthetic */ EnumType_O0II[] OIo() {
+        return new EnumType_O0II[]{oi0, oio, oiI, oii};
+    }
+}
+

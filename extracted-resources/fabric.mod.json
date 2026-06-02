@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "clientutils",
+  "version": "1.0.0",
+  "name": "Client Utils",
+  "description": "Client-side performance improvements.",
+  "authors": [
+    "KZero"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "environment": "client",
+  "accessWidener": "clap.accesswidener",
+  "entrypoints": {
+    "client": [
+      "clap.ClapEntrypoint"
+    ],
+    "main": [
+      "clap.ClapEntrypoint"
+    ]
+  },
+  "mixins": [
+    "clap.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "\u003e\u003d0.18.4",
+    "fabric": "*",
+    "minecraft": "1.21.11"
+  },
+  "badges": [
+    "library"
+  ],
+  "jars": [
+    {
+      "file": "META-INF/jars/catformat-core-2.1.0.jar"
+    },
+    {
+      "file": "META-INF/jars/catformat-fabric-2.1.0.jar"
+    },
+    {
+      "file": "META-INF/jars/lwjgl-nanovg-3.3.3-natives-linux.jar"
+    },
+    {
+      "file": "META-INF/jars/lwjgl-nanovg-3.3.3-natives-macos-arm64.jar"
+    },
+    {
+      "file": "META-INF/jars/lwjgl-nanovg-3.3.3-natives-macos.jar"
+    },
+    {
+      "file": "META-INF/jars/lwjgl-nanovg-3.3.3-natives-windows.jar"
+    },
+    {
+      "file": "META-INF/jars/lwjgl-nanovg-3.3.3.jar"
+    },
+    {
+      "file": "META-INF/jars/mixinextras-fabric-0.5.0.jar"
+    }
+  ]
+}
