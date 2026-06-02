@@ -14,7 +14,7 @@ import clap.core.module.Module;
 import clap.core.module.ModuleCategory;
 import clap.event.EventHandler;
 import clap.event.network.PacketReceiveEvent;
-import clap.model.EnumType_oioo_5;
+import clap.model.ClientSpoofMode;
 import clap.setting.Setting;
 import net.minecraft.network.packet.BrandCustomPayload;
 import net.minecraft.network.packet.CustomPayload;
@@ -26,9 +26,7 @@ import net.minecraft.network.packet.c2s.common.CustomPayloadC2SPacket;
  * Renamed from psx.Hyk.iOi
  */
 public class ClientSpoofModule extends Module {
-    // EnumType_oioo_5 values are still obfuscated in their own class:
-    // OOOo = Vanilla, PostProcessingModule = Modded, OOOi = Custom.
-    public final Setting mode = this.OOi0i("Mode", EnumType_oioo_5.OOOo);
+    public final Setting mode = this.OOi0i("Mode", ClientSpoofMode.Vanilla);
     public final Setting hideMods;
     public final Setting customClientName = this.OOi0I("Custom Client", "fabric");
     public final Setting preventFingerprinting;
@@ -53,11 +51,11 @@ public class ClientSpoofModule extends Module {
             return;
         }
 
-        EnumType_oioo_5 activeMode = this.getActiveMode();
-        if (activeMode == null || activeMode == EnumType_oioo_5.PostProcessingModule) {
+        ClientSpoofMode activeMode = this.getActiveMode();
+        if (activeMode == null || activeMode == ClientSpoofMode.Modded) {
             return;
         }
-        if (activeMode == EnumType_oioo_5.OOOi && !((Boolean)this.disableCustomPayloads.HelpCommand()).booleanValue()) {
+        if (activeMode == ClientSpoofMode.Custom && !((Boolean)this.disableCustomPayloads.HelpCommand()).booleanValue()) {
             return;
         }
 
@@ -65,52 +63,52 @@ public class ClientSpoofModule extends Module {
     }
 
     public String getClientBrand() {
-        EnumType_oioo_5 activeMode = this.getActiveMode();
+        ClientSpoofMode activeMode = this.getActiveMode();
         if (activeMode == null) {
             return null;
         }
-        if (activeMode == EnumType_oioo_5.OOOo) {
+        if (activeMode == ClientSpoofMode.Vanilla) {
             return "vanilla";
         }
-        if (activeMode == EnumType_oioo_5.PostProcessingModule) {
+        if (activeMode == ClientSpoofMode.Modded) {
             return "fabric";
         }
-        if (activeMode == EnumType_oioo_5.OOOi) {
+        if (activeMode == ClientSpoofMode.Custom) {
             return (String)this.customClientName.HelpCommand();
         }
         throw new MatchException(null, null);
     }
 
     public boolean shouldBlockFingerprinting() {
-        EnumType_oioo_5 activeMode = this.getActiveMode();
+        ClientSpoofMode activeMode = this.getActiveMode();
         if (activeMode == null) {
             return false;
         }
-        if (activeMode == EnumType_oioo_5.OOOo || activeMode == EnumType_oioo_5.PostProcessingModule) {
+        if (activeMode == ClientSpoofMode.Vanilla || activeMode == ClientSpoofMode.Modded) {
             return true;
         }
-        if (activeMode == EnumType_oioo_5.OOOi) {
+        if (activeMode == ClientSpoofMode.Custom) {
             return (Boolean)this.preventFingerprinting.HelpCommand();
         }
         throw new MatchException(null, null);
     }
 
-    public EnumType_oioo_5 getActiveMode() {
+    public ClientSpoofMode getActiveMode() {
         if (!this.IoOo()) {
             return null;
         }
-        return (EnumType_oioo_5)this.mode.HelpCommand();
+        return (ClientSpoofMode)this.mode.HelpCommand();
     }
 
     public boolean shouldHideMods() {
-        EnumType_oioo_5 activeMode = this.getActiveMode();
+        ClientSpoofMode activeMode = this.getActiveMode();
         if (activeMode == null) {
             return false;
         }
-        if (activeMode == EnumType_oioo_5.OOOo || activeMode == EnumType_oioo_5.PostProcessingModule) {
+        if (activeMode == ClientSpoofMode.Vanilla || activeMode == ClientSpoofMode.Modded) {
             return true;
         }
-        if (activeMode == EnumType_oioo_5.OOOi) {
+        if (activeMode == ClientSpoofMode.Custom) {
             return (Boolean)this.hideMods.HelpCommand();
         }
         throw new MatchException(null, null);
@@ -136,7 +134,7 @@ public class ClientSpoofModule extends Module {
 
     /** @deprecated Use {@link #getActiveMode()}. */
     @Deprecated
-    public EnumType_oioo_5 oIii() {
+    public ClientSpoofMode oIii() {
         return this.getActiveMode();
     }
 

@@ -18,22 +18,21 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-import clap.model.EnumType_oioo_5;
-import clap.config.ConfigSupport_ooo0_0;
+import clap.model.ClientSpoofMode;
+import clap.config.ClientSpoofState;
 
 @Mixin(value={ClientDataPackManager.class})
 public class ClientDataPackManagerMixin {
     @Redirect(method={"trySelectingPacks"}, at=@At(value="INVOKE", target="Ljava/util/Map;get(Ljava/lang/Object;)Ljava/lang/Object;"))
-    private Object redirectSelectPacks(Map param1, Object param2) {
-        VersionedIdentifier v3 = (VersionedIdentifier)param2;
-        EnumType_oioo_5 v5 = ConfigSupport_ooo0_0.HelpCommand();
-        if (!v3.namespace().equalsIgnoreCase("fabric") || v5 == null) {
-            return param1.get(v3);
+    private Object redirectSelectPacks(Map packsById, Object id) {
+        VersionedIdentifier packId = (VersionedIdentifier)id;
+        ClientSpoofMode activeMode = ClientSpoofState.getActiveMode();
+        if (!packId.namespace().equalsIgnoreCase("fabric") || activeMode == null) {
+            return packsById.get(packId);
         }
-        if (v5 == EnumType_oioo_5.PostProcessingModule) {
-            return param1.get(v3);
+        if (activeMode == ClientSpoofMode.Modded) {
+            return packsById.get(packId);
         }
         return null;
     }
 }
-

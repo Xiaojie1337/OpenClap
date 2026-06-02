@@ -15,16 +15,15 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import clap.config.ConfigSupport_ooo0_0;
+import clap.config.ClientSpoofState;
 
 @Mixin(value={ClientBrandRetriever.class})
 public class ClientBrandSpoofMixin {
     @Inject(method={"getClientModName"}, at={@At(value="HEAD")}, remap=false, cancellable=true)
-    private static void getClientModName(CallbackInfoReturnable param0) {
-        String v1 = ConfigSupport_ooo0_0.OOo();
-        if (v1 != null) {
-            param0.setReturnValue((Object)v1);
+    private static void getClientModName(CallbackInfoReturnable callback) {
+        String brand = ClientSpoofState.getClientBrand();
+        if (brand != null) {
+            callback.setReturnValue((Object)brand);
         }
     }
 }
-
