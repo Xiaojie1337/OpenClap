@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Decompiled with CFR 0.152.
  */
 package clap.config;
@@ -27,22 +27,22 @@ public final class ConfigSupport_ooo0_0 {
 
     public static String OOo() {
         ClientSpoofModule v0 = ConfigSupport_ooo0_0.PacketEvent();
-        return v0 == null ? null : v0.oiOO();
+        return v0 == null ? null : v0.getClientBrand();
     }
 
     public static boolean OOi() {
         ClientSpoofModule v0 = ConfigSupport_ooo0_0.PacketEvent();
-        return v0 != null && v0.oiOo();
+        return v0 != null && v0.shouldBlockFingerprinting();
     }
 
     public static EnumType_oioo_5 HelpCommand() {
         ClientSpoofModule v0 = ConfigSupport_ooo0_0.PacketEvent();
-        return v0 == null ? null : v0.oIii();
+        return v0 == null ? null : v0.getActiveMode();
     }
 
     public static boolean GuiSupport_OOI() {
         ClientSpoofModule v0 = ConfigSupport_ooo0_0.PacketEvent();
-        return v0 != null && v0.oiO0();
+        return v0 != null && v0.shouldHideMods();
     }
 
     private ConfigSupport_ooo0_0() {
